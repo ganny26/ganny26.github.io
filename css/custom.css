@@ -1,0 +1,45 @@
+nav.top-nav {
+    height: 122px;
+}
+
+nav.top-nav a.page-title {
+    line-height: 122px;
+    font-size: 48px;
+}
+.main-content{
+	margin-top: 122px;
+}
+
+.items-content{
+	margin-top: 500;
+	
+
+}
+
+.items-widget{
+	height: 211px !important;
+    width: 209px !important;
+}
+
+i::before { 
+    padding-right: 10px !important;
+}
+
+.card-items{
+	color: white !important;
+	font-weight: 15px !important;
+
+}
+
+.item.image{
+	 width: 100% !important;
+}
+
+.items-background{
+	background-image: url('/images/pattern.jpg') ;
+}
+
+.footer-effect{
+	color: black !important;
+	font-weight: 15px !important;
+}

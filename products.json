@@ -1,0 +1,69 @@
+{
+	"status": "success",
+	"result": [{
+		"id": "item001",
+		"item_name": "ATH-MX Headphone",
+		"purchased_count": "1230",
+		"price": "2311",
+		"avg_rating": "2",
+		"tags": "Entertainment,Music",
+		"link": "http://www.google.com",
+		"img_src":"/images/headphones.jpg",
+		"likes": "3"
+	}, {
+		"id": "item002",
+		"item_name": "Handy Chopper",
+		"purchased_count": "6554",
+		"price": "230",
+		"avg_rating": "4",
+		"tags": "Household,Chopper",
+		"link": "http://www.google.com",
+		"img_src":"/images/chopper.jpg",
+		"likes": "3"
+
+	}, {
+		"id": "item003",
+		"item_name": "Apple Mac",
+		"purchased_count": "78",
+		"price": "55000",
+		"avg_rating": "4",
+		"tags": "Computer,Electronics",
+		"link": "http://www.google.com",
+		"img_src":"/images/mac.png",
+		"likes": "10"
+
+	}, {
+		"id": "item004",
+		"item_name": "Dandruff Shampoo",
+		"purchased_count": "107",
+		"price": "150",
+		"avg_rating": "4",
+		"tags": "Cosmetics,Fragments",
+		"link": "http://www.google.com",
+		"img_src":"/images/shampoo.jpg",
+		"likes": "109"
+
+	}, {
+		"id": "item005",
+		"item_name": "Sony PS 4",
+		"purchased_count": "56",
+		"price": "12000",
+		"avg_rating": "4",
+		"tags": "Entertainment,Games",
+		"link": "http://www.google.com",
+		"img_src":"/images/ps4.jpg",
+		"likes": "5"
+
+	}, {
+		"id": "item006",
+		"item_name": "Google Pixel",
+		"purchased_count": "2300",
+		"price": "34200",
+		"avg_rating": "4",
+		"tags": "Mobile,Android",
+		"link": "http://www.google.com",
+		"img_src":"/images/mobilepic.jpg",
+		"likes": "4"
+
+	}]
+}
