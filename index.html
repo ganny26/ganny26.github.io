@@ -1,9 +1,49 @@
-
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>github.io</title>
-	</head>
-	<body>
-		<h1>Hello World</h1>
-	</body>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="jquery-ui.css">
+    <script src="jquery.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script src="angular.min.js"></script>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body ng-app="myApp">
+    <div class="row container">
+      <h3>Auto Complete</h3>
+        <form class="col s12">
+            <div class="row" ng-controller="autoCompleteController">
+                <div class="input-field col s12">
+                    <input placeholder="Type name to search" auto-complete-directive ui-items="names" ng-model="selected" id="first_name" type="text">
+                </div>
+            </div>
+        </form>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script>
+        var app = angular.module('myApp', []);
+        app.controller('autoCompleteController', ['$scope', function($scope) {
+            $scope.names = ["john", "bill", "charlie", "robert", "alban", "oscar", "marie", "celine", "brad", "drew", "rebecca", "michel", "francis", "jean", "paul", "pierre", "nicolas", "alfred", "gerard", "louis", "albert", "edouard", "benoit", "guillaume", "nicolas", "joseph"];
+        }]);
+
+        app.directive('autoCompleteDirective', function($timeout) {
+                    return function(scope, iElement, iAttrs) {
+                        iElement.autocomplete({
+                            source: scope[iAttrs.uiItems],
+                            select: function() {
+                                $timeout(function() {
+                                    iElement.trigger('input');
+                                }, 0);
+                            }
+                        });
+                    };
+                });
+        </script>
+</body>
 </html>
