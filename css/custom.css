@@ -43,3 +43,7 @@ i::before {
 	color: black !important;
 	font-weight: 15px !important;
 }
+
+body{
+	background-image: url('/images/pattern.jpg') ;
+}
