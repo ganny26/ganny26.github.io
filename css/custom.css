@@ -1,5 +1,39 @@
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    width:100%;
+.taskBoard{
+    margin-top: 20px;
+}
+
+.boardWidth{
+    margin-right: 10px;
+}
+
+.boardContainer{
+    padding: 20px;
+}
+.navHeadingCenter{
+    text-align: center !important;
+}
+.deleteBtn{
+    float: right !important;
+    position: absolute;
+}
+
+.listCardLayout{
+    padding: 25px;
+    position: relative;
+    display: block;
+    margin-bottom: .75rem;
+    background-color: #fff;
+    border-radius: .25rem;
+    border: 1px solid rgba(0,0,0,.125);
+        margin-left: 10px;
+    margin-right: 10px;
+
+}
+.deleteButton{
+    float:right;
+   
+}
+
+.cardContent{
+    margin-top:25px;
 }
