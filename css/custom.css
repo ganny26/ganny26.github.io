@@ -11,6 +11,20 @@
     -moz-transition: background .3s ease-in-out;
     transition: background .3s ease-in-out;
 }
+@media screen and (max-width: 768px){
+.logo-sub-txt{
+ 
+    font-size: 10px !important;
+  
+}
+
+}
+@media screen and (max-width: 768px){
+.logo-txt{
+    font-size: 10px !important;
+  
+}}
+
 .navbar-brand{
     position:relative;
     bottom: 30px;
