@@ -1,39 +1,120 @@
-.taskBoard{
-    margin-top: 20px;
+.btn-circle {
+    top: 155px;
+    left: 800px;
+    margin-top: 15px;
+    padding: 7px 16px;
+     
+    font-size: 40px;
+    color: #fff;
+    background: 0 0;
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
 }
-
-.boardWidth{
-    margin-right: 10px;
+.navbar-brand{
+    position:relative;
+    bottom: 30px;
 }
-
-.boardContainer{
-    padding: 20px;
+#bs-navbar > ul > li > a{
+    
+     font-family: 'Cinzel', serif;
+     font-weight: bold;
 }
-.navHeadingCenter{
-    text-align: center !important;
-}
-.deleteBtn{
-    float: right !important;
-    position: absolute;
-}
-
-.listCardLayout{
-    padding: 25px;
+.logo-sub-txt{
+     bottom: 69px;
     position: relative;
-    display: block;
-    margin-bottom: .75rem;
-    background-color: #fff;
-    border-radius: .25rem;
-    border: 1px solid rgba(0,0,0,.125);
-        margin-left: 10px;
-    margin-right: 10px;
+    font-family: 'Cinzel', serif;
+    left: 130px;
+    font-size: 15px;
+  
+}
+.logo-txt{
+    position: relative;
+    left: 130px;
+    font-family: 'Cinzel', serif;
+    font-size: 30px;
+    bottom: 65px;
+    font-weight: bold;
+}
+.btn-products {
+    top: 155px;
+    left: 550px;
+    margin-top: 15px;
+    padding: 7px 16px;
+    font-size: 40px;
+    color: #fff;
+    background: 0 0;
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
 
 }
-.deleteButton{
-    float:right;
-   
+
+
+
+
+
+.header-filter:after {
+  
+    background-color: rgba(0, 0, 0, 0.1) !important; 
+}
+.btn-colour {
+    top: 125px;
+    left: 550px;
+    margin-top: 15px;
+    padding: 7px 16px;
+    position: relative;
+    font-size: 40px;
+    color: #fff;
+    background: 0 0;
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
 }
 
-.cardContent{
-    margin-top:25px;
+.animated {
+    font-size: 40px !important;
+}
+
+a:hover,
+a:focus {
+    color: white!important;
+}
+
+.section {
+    padding: 70px !important;
+}
+
+.info .icon > i {
+    font-size: 2.2em !important;
+}
+
+#products {
+    top: 200px;
+    background: linear-gradient(#fdcc52, #fdc539);
+}
+
+.contact-section {
+    position: relative;
+    right: 20px;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+.footer-content{
+    top: 20px;
+    position: relative;
+    font-size: 15px;
+    
+}
+
+.copy-content{
+    position: relative;
+    bottom:30px;
+       font-size: 20px;
+    font-weight: bold;
+
 }

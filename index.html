@@ -1,98 +1,371 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Task Creater</title>
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/custom.css">
-    <!-- Javascript -->
-    <script src="scripts/angular.min.js"></script>
-    <script src="scripts/angular-route.min.js"></script>
-    <script src="scripts/mainController.js"></script>
-
-
-</head>
-
-<body ng-app="taskApp">
-    <nav class="navbar navbar-dark bg-primary">
-        <div class="nav navbar-nav navHeadingCenter">
-            <a class="nav-item nav-link ">My Task Creater</a>
-
-        </div>
-    </nav>
-    <div class="boardContainer">
-        <h1>Personal boards</h1>
-        <div class="row taskBoard" ng-controller="taskCtrl">
-            <button type="button" class="btn btn-primary" ng-click="createTask()">Create new List</button>
-            <div class="col-md-3 listCardLayout" ng-repeat="taskItem in taskBoard"  draggable="true" ondragstart="drag(event)" >
-                <div>
-                    List {{listValue}}
-                    <div class="deleteButton"> <button type="button" class="btn btn-primary" ng-click="deleteList()">Delete this list</button></div>
-                    <div>
-                        <a href="#" ng-click="addCardItem()">Add new card</a>
-                    </div>
-                    <div class="row cardContent" ng-repeat="cards in cardItem">
-                        <div class="card">
-                            <div class="card-block">
-                                <div style="float:right">
-                                    <button class="btn btn-primary" data-toggle="modal" data-target="#bd-example-modal-lg">Edit this card</button>
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+      <link rel="icon" type="image/png" sizes="76x76"" href="favicon/favicon.png">
+      <title>Sensem Colours</title>
+      <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+      <!--     Fonts and icons     -->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
+      <link href="css/animate.css" rel="stylesheet" />
+      <link herf="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.0/css/hover-min.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/aos.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+      <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Eczar" rel="stylesheet">
+      <!-- CSS Files -->
+      <link href="css/bootstrap.min.css" rel="stylesheet" />
+      <link href="css/material-kit.css" rel="stylesheet" />
+      <link href="css/custom.css" rel="stylesheet" />
+   </head>
+   <body class="landing-page">
+      <nav class="navbar navbar-transparent navbar-absolute">
+         <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand" href="#">
+                  <img src="logo/logo2.png">
+                  <span class="logo-txt">sensemcolours</span>
+                  <div class="logo-sub-txt"> customer | company | team
+                  </div>
+               </a>
+            </div>
+            <div class="navbar-collapse collapse" id="bs-navbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li>
+                     <a class="page-scroll" href="#products">Products</a>
+                  </li>
+                  <li>
+                     <a class="page-scroll" href="#colours">
+                     About Us
+                     </a>
+                  </li>
+                  <li>
+                     <a class="page-scroll" href="#contact">
+                     Contact Us
+                     </a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <div class="wrapper">
+      <div class="header header-filter" style="background-image: url('img/inkwallpaper.jpg');">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6">
+                  <h1 class="title aos-item" data-aos="fade-up" data-aos-duration="600">Colours are now a lifestyle choice</h1>
+                  <h4 class="aos-item" data-aos="fade-up" data-aos-duration="1000">Your One Stop Source for all the INK needs coupled with the best quality & service at no extra cost.</h4>
+                  <br />
+                  <a href="#products" class="btn btn-primary btn-raised btn-lg aos-item page-scroll" data-aos="fade-up" data-aos-duration="1000">
+                  Step into our world of colour
+                  </a>
+               </div>
+            </div>
+            <div class="features text-center">
+               <a href="#products" class="btn-products page-scroll">
+               <i class="fa fa-angle-double-down"></i>
+               </a>
+            </div>
+         </div>
+      </div>
+      <div class="main">
+         <!--Carousel product section-->
+         <!-- <div id="products">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <div class="carousel slide" data-ride="carousel">
+                  
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="section text-center">
+                                <div class="row  aos-item" data-aos="fade-up" data-aos-duration="600">
+                                    <div class="col-md-8 col-md-offset-2">
+                                        <h2 class="title">Our Products</h2>
+                                        <h5 class="description">Watch this space for more information </h5>
+                                    </div>
                                 </div>
-                                <h4 class="card-title">Card {{cards.count}}</h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <div class="container">
+                                    <div class="features">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="info  aos-item" data-aos="fade-right" data-aos-duration="1000">
+                                                    <div class="icon icon-primary">
+                                                        <i class="material-icons">opacity</i>
+                                                    </div>
+                                                    <h4 class="info-title">Flexo graph inks</h4>
+                                                    <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                                                    <a data-target="#carousel-example-generic" data-slide-to="1">Read More</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="info aos-item" data-aos="fade-right" data-aos-duration="1000">
+                                                    <div class="icon icon-success">
+                                                        <i class="material-icons">opacity</i>
+                                                    </div>
+                                                    <h4 class="info-title">Roto gravure inks</h4>
+                                                    <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                                                    <a data-target="#carousel-example-generic" data-slide-to="2">Read More</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="info aos-item" data-aos="fade-right" data-aos-duration="1000">
+                                                    <div class="icon icon-danger">
+                                                        <i class="material-icons">opacity</i>
+                                                    </div>
+                                                    <h4 class="info-title">Gravfreeze inks</h4>
+                                                    <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                                                    <a data-target="#carousel-example-generic" data-slide-to="3">Read More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="section text-center">
+                                <div class="row  aos-item" data-aos="fade-up" data-aos-duration="600">
+                                    <div class="col-md-8 col-md-offset-2">
+                                        <h2 class="title">Flexo graph inks</h2>
+                                        <h5 class="description">Give Some description</h5>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="features">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="info  aos-item" data-aos="fade-right" data-aos-duration="1000">
+                                                    <div class="icon icon-primary">
+                                                        <i class="material-icons">opacity</i>
+                                                    </div>
+                                                    <h4 class="info-title">Flexo graph inks</h4>
+                                                    <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                                                    <a data-target="#carousel-example-generic" data-slide-to="0">See all products</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="section text-center">
+                                <div class="row  aos-item" data-aos="fade-up" data-aos-duration="600">
+                                    <div class="col-md-8 col-md-offset-2">
+                                        <h2 class="title">Roto gravure inks</h2>
+                                        <h5 class="description">Give Some description</h5>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="features">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="info  aos-item" data-aos="fade-right" data-aos-duration="1000">
+                                                    <div class="icon icon-primary">
+                                                        <i class="material-icons">opacity</i>
+                                                    </div>
+                                                    <h4 class="info-title">First Feature</h4>
+                                                    <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                                                    <a data-target="#carousel-example-generic" data-slide-to="0">See all products</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="section text-center">
+                                <div class="row  aos-item" data-aos="fade-up" data-aos-duration="600">
+                                    <div class="col-md-8 col-md-offset-2">
+                                        <h2 class="title">Gravfreeze inks</h2>
+                                        <h5 class="description">Give Some description</h5>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="features">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="info  aos-item" data-aos="fade-right" data-aos-duration="1000">
+                                                    <div class="icon icon-primary">
+                                                        <i class="material-icons" style="font-size:20px;">opacity</i>
+                                                    </div>
+                                                    <h4 class="info-title">First Feature</h4>
+                                                    <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                                                    <a data-target="#carousel-example-generic" data-slide-to="0">See all products</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="dragDiv"  ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div> -->
+         <!--Product section-->
+         <div class="section text-center" id="products">
+            <div class="row  aos-item" data-aos="fade-up" data-aos-duration="600">
+               <div class="col-md-8 col-md-offset-2">
+                  <h2 class="title">Our Products</h2>
+                  <!--<h5 class="description">Give Some description</h5>-->
+               </div>
             </div>
-        </div>
-        <!-- Large modal -->
-        <div class="modal fade" id="bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" ng-controller="commentCtrl">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Card 1</h4>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <h3>Description</h3>
-                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <textarea id="cardDescription" ng-model="commentText" cols="80" rows="10" placeholder="Provide your comments here" value="Some quick example text to build on the card title and make up the bulk of the card's content"></textarea>
-                            </div>
-                            <div class="col-md-4">
-                                <button class="btn btn-primary" id="deleteCard">Delete this Card</button>
-                            </div>
-                        </div>
-                        <div class="row" style="margin-left:10px;margin-top:10px;">
-                            <button class="btn btn-primary" id="commentBtn" ng-click="addComment()">Add Comment</button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <ul>
-                            <li ng-repeat="comment in comments">{{comment.text}}&nbsp;{{comment.timeStamp}}</li>
-                        </ul>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
+            <div class="container">
+               <div class="features">
+               </div>
+               <div class="features">
+                  <div class="row  aos-item" data-aos="fade-up" data-aos-duration="1000">
+                     <div class="col-md-12">
+                        <h1>Watch this space for more information!!</h1>
+                     </div>
+                  </div>
+               </div>
+               <div class="features">          
+               </div>
+               <div class="features  aos-item" data-aos="fade-up" data-aos-duration="1500">
+                  <a href="#colours" class="btn-products text-center page-scroll">
+                  <i class="fa fa-angle-double-down animated"></i>
+                  </a>
+               </div>
+               <div class="features">
+               </div>
             </div>
-        </div>
-
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
-        <script src="scripts/dragscript.js"></script>
-</body>
-
+         </div>
+         <!--Colour section-->
+         <div class="header header-filter" id="colours" style="background-image: url('img/image4.jpg');">
+            <div class="container">
+               <div class="aos-item" data-aos="fade-up" data-aos-duration="600">
+                  <h1 class="title">About us</h1>
+                  <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent elementum ligula eu eleifend elementum. Suspendisse non ultrices dolor. Cras viverra nibh metus, vitae viverra orci bibendum quis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean id urna a massa gravida tristique. Pellentesque auctor, nisl id consequat viverra, turpis tellus tempus dolor, efficitur porta lectus leo eu turpis. Curabitur aliquam nulla sed tellus mollis, efficitur faucibus neque pellentesque. Sed laoreet tincidunt rutrum. Cras bibendum nisl sed eleifend interdum. Donec dignissim urna non lectus cursus tempus. Fusce nisl ex, tempor id tincidunt ut, tempus pharetra leo.
+                  </h3>
+                  <br />
+                  <div class="text-center">
+                     <a href="#contact" class="btn-products page-scroll">
+                     <i class="fa fa-angle-double-down"></i>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="section landing-section" id="contact">
+            <div class="row">
+               <div class="col-md-12">
+                  <h2 class="text-center title">Work with us</h2>
+               </div>
+               <div class="col-md-4">
+                  <form class="contact-form">
+                     <div class="row">
+                        <div class="col-md-12">
+                           <div class="form-group label-floating">
+                              <label class="control-label">Your Name</label>
+                              <input type="text" class="form-control">
+                           </div>
+                        </div>
+                        <div class="col-md-12">
+                           <div class="form-group label-floating">
+                              <label class="control-label">Your Phone No</label>
+                              <input type="text" class="form-control">
+                           </div>
+                        </div>
+                        <div class="col-md-12">
+                           <div class="form-group label-floating">
+                              <label class="control-label">Your Email</label>
+                              <input type="email" class="form-control">
+                           </div>
+                        </div>
+                        <div class="col-md-12">
+                           <div class="form-group label-floating">
+                              <label class="control-label">Your Message</label>
+                              <textarea class="form-control" rows="4"></textarea>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-md-12">
+                           <button class="btn btn-primary btn-raised">
+                           Send Email
+                           </button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+               <div class="col-md-8">
+                  <div id="map">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <footer class="footer">
+         <div class="container">
+         <div class="row">
+            <div class="col-md-6 col-xs-4">
+               <b>Mobile:</b>&nbsp;9443164560,9487764560<br/>
+               <b>Office:</b>&nbsp;9787264560<br/>
+               <b>Email:</b>&nbsp;sensemcolours@gmail.com<br>ceo@sensemcolours.com<br/>
+               <b>&copy; 2017, Sensem Colours &nbsp;</b>
+            </div>
+      </footer>
+      </div>
+   </body>
+   <!--   Core JS Files   -->
+   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+   <script src="js/aos.js"></script>
+   <script src="js/bootstrap.min.js" type="text/javascript"></script>
+   <script src="js/material.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+   <script src="scripts.js"></script>
+   <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+   <script src="js/nouislider.min.js" type="text/javascript"></script>
+   <!--  Plugin for the Datepicker, full documentation here: http://www.eyecon.ro/bootstrap-datepicker/ -->
+   <script src="js/bootstrap-datepicker.js" type="text/javascript"></script>
+   <!-- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc -->
+   <script src="js/material-kit.js" type="text/javascript"></script>
+   <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-89989114-1', 'auto');
+      ga('send', 'pageview');
+      
+   </script>
+   <script>
+      function initMap() {
+              var uluru = {lat: 11.91823, lng:79.6442613};
+              var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 14,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                center: uluru
+              });
+              var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+              });
+      
+              var infoWindowOptions = {
+              	content:"Sensem Colours,R.S.No.391/1,Poothurai to Gorimedu road,Vanur taluk,Villupuram District,Tamilnadu-605111."
+              }
+      
+              var infoWindow = new google.maps.InfoWindow(infoWindowOptions);
+              google.maps.event.addListener(marker,'mouseover',function(e){
+              	infoWindow.open(map,marker);
+              });
+            }
+   </script>
+   <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBe4cDYUxGvEjkf7Z-_BKSJ7la9MFih1-M&callback=initMap"></script>
 </html>
