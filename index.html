@@ -156,6 +156,41 @@ console.log('outside function b',b); //Uncaught ReferenceError: b is not defined
                   });
                </code>
             </pre>
+          <h5 class="header">XMLHttpRequest with Promise</h5>
+            <pre>
+              <code class="hljs js">     
+'use strict'
+
+function get(url){
+  return new Promise(function(resolve,reject){
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET',url);
+    xhr.onload = function(){
+      if(xhr.status == 200){
+        resolve(xhr.response);
+      }
+      else {
+             reject(Error(xhr.statusText));
+        }
+    };
+      xhr.onerror = function() {
+        reject(Error("Network Error"));
+      };
+      xhr.send();
+    });
+}
+
+const URL = "https://jsonplaceholder.typicode.com/users/2";
+get(URL).then(function(response) {
+  var response = JSON.parse(response);
+    console.log(response.name); //Ervin Howell
+    console.log(response.email); //Shanna@melissa.tv
+}, function(error) {
+  console.error("Failed!", error);
+})
+               </code>
+            </pre>
+
 
 
       </div>
