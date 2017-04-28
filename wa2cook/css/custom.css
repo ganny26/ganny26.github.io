@@ -65,10 +65,13 @@ footer {
 
 @media screen and (max-width: 500px) and (min-width: 300px) {
     .joincustom {
-        top: 17px;
+        top: 22px;
         position: fixed;
         font-size: 20px;
         left: 280px;
+    }
+    .navbar-brand {
+        height: 58px; !important
     }
     .topnav {
 	padding-top:0px;
