@@ -1,0 +1,93 @@
+.mobileimg {
+    top: 50px;
+}
+
+.brandName {
+    bottom: 9px;
+    position: relative;
+    left: 163px;
+    font-size: 18px;
+}
+
+footer {
+    text-align: center;
+}
+
+
+/*#betaresponse {
+    position: relative;
+    top: 33px;
+    right: 278px;
+}
+
+#betarequest {
+    position: relative;
+    top: 33px;
+    right: 278px;
+}*/
+
+.navbar-brand {
+    max-width: 50%;
+}
+
+.brandlogo {
+    width: 200;
+    height: 50;
+}
+
+.navbar-brand>img {
+    bottom: 2px;
+}
+
+.joincustom {
+    top: 10px;
+    position: relative;
+    font-size: 20px;
+}
+
+.customspace {
+    margin-top: 10px;
+}
+
+
+/*.emailctrl {
+    width: 50% !important;
+}*/
+
+.topnav {
+    padding-top: 10px;
+    padding-right: 30px !important;
+    padding-left: 30px !important;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 28px;
+}
+
+@media screen and (max-width: 730px) and (min-width: 412px) {
+    .joincustom {
+        top: 20px;
+        position: fixed;
+        font-size: 20px;
+        left: 350px;
+    }
+    /*#betarequest {
+        position: relative;
+        top: 36px;
+        right: 0;
+        left: -181px;
+    }
+    #invite-form {
+        position: relative;
+        top: 35px;
+    }*/
+    .customspace {
+        margin-top: 20px;
+    }
+    .betaspace {
+        margin-bottom: 20px;
+    }
+}
+
+footer {
+    font-size: 20px;
+}
