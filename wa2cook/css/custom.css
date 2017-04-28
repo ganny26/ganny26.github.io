@@ -63,12 +63,12 @@ footer {
     padding-bottom: 28px;
 }
 
-@media screen and (max-width: 730px) and (min-width: 412px) {
+@media screen and (max-width: 730px) and (min-width: 300px) {
     .joincustom {
         top: 20px;
         position: fixed;
         font-size: 20px;
-        left: 350px;
+        left: 300px;
     }
     /*#betarequest {
         position: relative;
