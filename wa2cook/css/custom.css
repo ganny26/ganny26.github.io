@@ -65,7 +65,7 @@ footer {
 
 @media screen and (max-width: 500px) and (min-width: 300px) {
     .joincustom {
-        top: 17px;
+        top: 15px;
         position: fixed;
         font-size: 20px;
         left: 300px;
