@@ -1,6 +1,7 @@
 <html>
 <body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<div id="response"></div>
 <script>
 // $.ajax({
 // 		type: "POST",
@@ -31,7 +32,8 @@
         movies: ["I Love You Man", "Role Models"]
     },
     success: function(response){
-    	console.log('Post happened...')
+    	console.log('Post happened...');
+        document.write(response);
         console.log(response);
     }
 });
