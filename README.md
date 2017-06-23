@@ -1,1 +1,1 @@
-Javascript & ECMA
+Javascript & ECMA handbook
