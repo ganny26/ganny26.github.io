@@ -52,5 +52,6 @@ app.get('/', function (req, res) {
     scan(req, res);
 });
 
-
-app.listen(8656);
+app.listen(8656,function(req,res){
+    console.log('app running on localhost:8656');
+});
