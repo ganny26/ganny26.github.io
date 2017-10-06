@@ -7,6 +7,12 @@
   "theme_color": "#2196F3",
   "description": "Javascript simple guide",
   "orientation": "landscape",
+   "related_applications": [{
+    "platform": "web"
+  }, {
+    "platform": "play",
+    "url": "https://play.google.com/store/apps/details?id="
+  }],
   "icons": [{
     "src": "./favicon/favicon-16x16.png",
     "sizes": "16x16",
