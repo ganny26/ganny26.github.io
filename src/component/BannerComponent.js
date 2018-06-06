@@ -9,9 +9,6 @@ class BannerComponent extends Component {
                 <h5 className="banner__description">JavaScript lover, React JS & Android Developer ,
          Open Source enthusiast</h5>
                 <div className="banner__contact">
-                    <a href="/resume">
-                        <button className="c_button">Resume</button>
-                    </a>
                     <a href="mailto:selvaganeshrajam@gmail.com">
                         <button className="c_button">Contact</button>
                     </a>
@@ -21,6 +18,7 @@ class BannerComponent extends Component {
                         <SocialIcon iconname="fab fa-twitter" url="https://twitter.com/seganesa" />
                         <SocialIcon iconname="fab fa-linkedin-in" url="https://in.linkedin.com/in/selvaganesh-rajam" />
                         <SocialIcon iconname="fab fa-instagram" url="https://www.instagram.com/selvaganesh93/" />
+                        <SocialIcon iconname="fab fa-youtube" url="https://www.youtube.com/user/ganeshrsg/" />
                     </div>
                 </div>
             </div>

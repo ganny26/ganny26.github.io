@@ -110,3 +110,41 @@
 .link-c{
  color: white
 }
+
+.progress{
+  border-radius: 20px;
+  width: 100%;
+  background-color: #ddd;
+}
+.progress-bar{
+  border-radius: 20px;
+  width: 10%;
+  height: 15px;
+  background-color: #4CAF50;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+
+.skills-content{
+  margin:10px 30px 30px 30px;
+}
+.skill-description{
+  margin:30px 30px 0 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.skill-view{
+  flex-direction: column;
+}
+
+.badge{
+  background: none repeat scroll 0 0 #F6F6F6;
+    color: #333;
+    font-weight: normal;
+    border-radius: 20px;
+    float: left;
+    margin: 0 10px 18px 0;
+    padding: 10px 20px;
+}
