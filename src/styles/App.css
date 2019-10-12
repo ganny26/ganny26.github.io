@@ -79,7 +79,6 @@
 
 
 .contact{
-  width: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-box;
@@ -120,7 +119,7 @@
   border-radius: 20px;
   width: 10%;
   height: 15px;
-  background-color: #4CAF50;
+  background-color: #2D3142;
   text-align: center;
   line-height: 30px;
   color: white;
@@ -140,11 +139,43 @@
 }
 
 .badge{
-  background: none repeat scroll 0 0 #F6F6F6;
-    color: #333;
+  background: none repeat scroll 0 0 #2D3142;
+    color: #E8E8E8;
     font-weight: normal;
     border-radius: 20px;
     float: left;
     margin: 0 10px 18px 0;
     padding: 10px 20px;
+}
+
+.scrollbar {
+  background-color: #F5F5F5;
+  float: left;
+  height: 300px;
+  margin-bottom: 25px;
+  margin-left: 22px;
+  margin-top: 40px;
+  width: 65px;
+  overflow-y: scroll;
+}
+
+.force-overflow {
+  min-height: 450px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+} 
+
+::-webkit-scrollbar-thumb {
+
+  border-radius: 10px;
+	background-color: #FFF;
+	background-image: -webkit-gradient(linear,
+									   40% 0%,
+									   75% 84%,
+									   from(#4D9C41),
+									   to(#19911D),
+									   color-stop(.6,#54DE5D))
 }
